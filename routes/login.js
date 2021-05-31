@@ -9,9 +9,9 @@ router.get("/", (req, res, next) => {
 });
 
 router.post("/", (req, res) => {
-  return manager.findUser(req.body).then(result => {
+  return manager.findUser(req.body).then((result) => {
     let status;
-    console.log(result);
+    console.log(result + "SOSI BLYA");
     if (result) {
       req.session.token = req.sessionID;
       status = true;
